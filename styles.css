@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
 
 * {
   margin: 0;
@@ -32,7 +32,7 @@ body {
 }
 
 body * {
-  font-family: "Inter", sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: var(--text-color);
 }
 
@@ -57,6 +57,8 @@ body * {
 
 #profile img {
   width: 112px;
+  border: 3px solid var(--stroke-color);
+  border-radius: 50%;
 }
 
 /* Switch */
@@ -100,7 +102,7 @@ body * {
 }
 
 /* Btn Links */
-.btn-links ul {
+#links {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -108,14 +110,14 @@ body * {
   padding: 24px 0;
 }
 
-.btn-links a {
+#links a {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 16px 24px;
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 8px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 500;
   backdrop-filter: blur(4px);
@@ -123,7 +125,7 @@ body * {
   transition: background 0.3s;
 }
 
-.btn-links a:hover {
+#links a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
@@ -159,12 +161,17 @@ footer {
 footer a {
   text-decoration: none;
   font-weight: 500;
+  color: #8257e6;
 }
 
 /* Media Queries */
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .ligth {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
   }
 }
 
