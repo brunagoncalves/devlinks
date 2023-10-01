@@ -7,27 +7,28 @@
 }
 
 :root {
-  --text-color: #ffffff;
-  --bg-url: url(./assets/bg-mobile.jpg);
+  --text-color: #FFFFFF;
+  --text-color-hover: rgba(83, 132, 247, 1);
+  --background: rgba(59, 68, 106, 1);
   --stroke-color: rgba(255, 255, 255, 0.5);
-  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color: rgba(66, 76, 111, 1);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
 }
 
 .ligth {
-  --text-color: #000000;
-  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --text-color: #2A3C3C;
+  --background: rgba(255, 255, 255, 1);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color: rgba(230, 230, 233, 1);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.2);
   --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover;
+  background: var(--background);
   height: 100vh;
 }
 
@@ -37,17 +38,24 @@ body * {
 }
 
 /* Main */
-.content {
+.container {
   width: 100%;
-  max-width: 588px;
-  margin: 56px auto 0;
-  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Profile */
+.content-profile {
+  width: 620px;
+  max-width: calc(100vw - 10px);
+  margin: 0 auto;
+  padding: 16px;
+}
+
 #profile {
   text-align: center;
-  padding: 24px;
+  padding: 24px 0 24px;
 }
 
 #profile p {
@@ -57,7 +65,7 @@ body * {
 
 #profile img {
   width: 112px;
-  border: 3px solid var(--stroke-color);
+  border: 4px solid rgba(80, 91, 129, 1);
   border-radius: 50%;
 }
 
@@ -98,7 +106,7 @@ body * {
 }
 
 .ligth button:hover {
-  outline: 8px solid var(--highlight-color);
+  outline: 6px solid var(--highlight-color);
 }
 
 /* Btn Links */
@@ -128,6 +136,7 @@ body * {
 #links a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
+  color: var(--text-color-hover);
 }
 
 /* Social Links */
@@ -162,17 +171,6 @@ footer a {
   text-decoration: none;
   font-weight: 500;
   color: #8257e6;
-}
-
-/* Media Queries */
-@media (min-width: 700px) {
-  :root {
-    --bg-url: url(./assets/bg-desktop.jpg);
-  }
-
-  .ligth {
-    --bg-url: url(./assets/bg-desktop-light.jpg);
-  }
 }
 
 /* Animations */
